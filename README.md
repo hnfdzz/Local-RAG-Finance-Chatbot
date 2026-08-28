@@ -33,3 +33,84 @@ Local_RAG_Finance_Chatbot/
   config.py               (Central system configuration file)
   README.md               (Project documentation)
   requirements.txt        (Python project dependencies)
+
+Tech Stack
+Frontend: Streamlit
+
+LLM and Embeddings: Ollama (phi3:mini), HuggingFace Sentence Transformers
+
+Vector Database: ChromaDB
+
+Orchestration: LangChain
+
+Visualization: Plotly, Pandas
+
+Document Processing: PyPDF, pdfplumber
+
+Getting Started
+1. Prerequisites
+Python 3.10+
+
+Ollama installed and running locally.
+
+2. Installation
+Clone the repository and set up a virtual environment:
+
+Bash
+git clone [https://github.com/hnfdzz/Local-RAG-Finance-Chatbot.git](https://github.com/hnfdzz/Local-RAG-Finance-Chatbot.git)
+cd Local-RAG-Finance-Chatbot
+
+python -m venv venv
+# On Windows:
+venv\Scripts\activate
+
+pip install -r requirements.txt
+3. Pull Required LLM Model
+Ensure Ollama is running, then pull the lightweight Phi 3 model:
+
+Bash
+ollama pull phi3:mini
+4. Run the Application
+Start the Streamlit web dashboard:
+
+Bash
+streamlit run app.py
+
+**Langkah Membuat Commit Bertahap di GitHub Desktop**
+
+1. **Commit 1: Update Dokumentasi README**
+   * Simpan perubahan berkas `README.md` di VS Code.
+   * Buka GitHub Desktop. Pada kolom Summary di bagian kiri bawah, isi:
+     `docs: add professional README with features, architecture, and setup guide`
+   * Klik **Commit to main**, lalu klik **Push origin**.
+
+2. **Commit 2: Rapikan Komentar Kode**
+   * Buka berkas `config.py` di VS Code, tambahkan baris komentar di bagian atas berkas:
+     `# Configuration settings for Local RAG Finance Intelligence`
+   * Simpan berkas.
+   * Di GitHub Desktop, isi kolom Summary:
+     `refactor: add inline code comments and configuration annotations`
+   * Klik **Commit to main**, lalu klik **Push origin**.
+
+3. **Commit 3: Perbarui Templat Environment**
+   * Buka berkas `.env.example` di VS Code, pastikan isinya rapi:
+     ```env
+     OLLAMA_MODEL=phi3:mini
+     EMBEDDING_MODEL=all_MiniLM_L6_v2
+     VECTOR_DB_DIR=vector_db
+     ```
+   * Simpan berkas.
+   * Di GitHub Desktop, isi kolom Summary:
+     `chore: update environment configurations and example template`
+   * Klik **Commit to main**, lalu klik **Push origin**.
+
+**Pengaturan Akhir di Website GitHub**
+
+Buka halaman repositori di browser, lalu lakukan pembaruan berikut:
+
+1. Klik tombol **Settings** (ikon roda gigi di sebelah kanan judul *About* pada bilah samping kanan).
+2. Isikan bagian **Description**:
+   `100% Offline Local RAG Financial Chatbot with Interactive Analytics and Health Check using Ollama and Streamlit.`
+3. Tambahkan topik pada kolom **Topics**:
+   `rag`, `langchain`, `ollama`, `financial analysis`, `streamlit`, `chromadb`, `python`.
+4. Klik **Save changes**.
